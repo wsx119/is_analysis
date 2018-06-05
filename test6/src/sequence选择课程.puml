@@ -1,0 +1,12 @@
+ @startuml
+ title 基于GitHub的实验管理平台--选择课程用例的顺序图
+ actor users
+ users -> courses: 选择课程
+ alt 如果users是老师
+ 	courses -> classes
+ 	courses ->tests
+ 	classes -->users:选择该课程的班级信息
+ else 如果users是students
+    tests -->users:该课程的实验信息
+ end
+ @enduml

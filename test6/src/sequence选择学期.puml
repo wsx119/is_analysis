@@ -1,0 +1,11 @@
+@startuml
+title 基于GitHub的实验管理平台--选择学期用例的顺序图
+actor users
+users -> terms: 选择学期
+alt 如果users是老师
+	terms -> courses
+	courses -->users:该学期老师所授课程信息
+else 如果users是students
+    courses --> users:该学期学生所选课程信息
+end
+@enduml

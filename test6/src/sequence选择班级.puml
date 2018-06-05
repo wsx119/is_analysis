@@ -1,0 +1,7 @@
+@startuml
+title 基于GitHub的实验管理平台--选择班级用例的顺序图
+actor teachers
+teachers -> classes: 选择班级
+classes -> students
+students -->teachers:该班级的学生信息
+@enduml
